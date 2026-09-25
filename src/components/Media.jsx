@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { FiPlay } from 'react-icons/fi';
 import CKP_RiseUp_2026 from '../assets/CKP_RiseUp_2026.jpg';
 import Band_RiseUp from '../assets/Band_RiseUp.jpg';
-import ĐLTT_2026 from '../assets/ĐLTT_2026.jpg';
-import UEH_22_4 from '../assets/UEH_22-4.jpg';
-import Vocal_DLTT from '../assets/Vocal_DLTT.jpg';
+import ĐLTT_2026 from '../assets/ĐLTT_2026.JPG';
+import UEH_22_4 from '../assets/UEH_22-4.JPG';
+import Vocal_DLTT from '../assets/Vocal_DLTT.JPG';
 
 
 
