@@ -73,7 +73,7 @@ const Members = () => {
       id: 9,
       name: 'Xuân Anh',
       role: '🎤 Main Vocalist',
-      image: joke,
+      image: XuânAnh,
       desc: 'Giọng hát ấm áp, cuốn hút, càng hát càng khiến người nghe muốn đắm chìm.'
     },
     {
