@@ -92,7 +92,12 @@ const Media = () => {
                       <img
                         src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
                         alt={video.title}
-                        onError={(e) => { e.target.src = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`; }}
+                        onError={(e) => { 
+                          const fallback = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+                          if (e.target.src !== fallback) {
+                            e.target.src = fallback; 
+                          }
+                        }}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40"
                       />
                       <div 
