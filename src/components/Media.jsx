@@ -22,8 +22,7 @@ const Media = () => {
 
   const videos = [
     { id: '1', title: 'Chiếc Khăn Piêu', youtubeId: 'lmehbj2FkNQ' },
-    { id: '2', title: 'Soạn', youtubeId: '-l-OxiAns7Y' },
-    { id: '3', title: 'Opalite', youtubeId: 'lXEFTC55ABE' }
+    { id: '2', title: 'Soạn', youtubeId: '-l-OxiAns7Y' }
   ];
 
   return (
@@ -93,10 +92,8 @@ const Media = () => {
                         src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
                         alt={video.title}
                         onError={(e) => { 
-                          const fallback = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
-                          if (e.target.src !== fallback) {
-                            e.target.src = fallback; 
-                          }
+                          e.target.onerror = null; 
+                          e.target.src = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`; 
                         }}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40"
                       />
