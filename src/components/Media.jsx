@@ -6,11 +6,10 @@ import Band_RiseUp from '../assets/Band_RiseUp.jpg';
 import ĐLTT_2026 from '../assets/ĐLTT_2026.JPG';
 import UEH_22_4 from '../assets/UEH_22-4.JPG';
 import Vocal_DLTT from '../assets/Vocal_DLTT.JPG';
-
-
-
+import Solo_Guitar from '../assets/Solo_Guitar.JPG';
 const Media = () => {
   const [activeTab, setActiveTab] = useState('photos');
+  const [playingVideo, setPlayingVideo] = useState(null);
 
   const photos = [
     CKP_RiseUp_2026,
@@ -18,13 +17,13 @@ const Media = () => {
     ĐLTT_2026,
     UEH_22_4,
     Vocal_DLTT,
-    'https://images.unsplash.com/photo-1511192336575-5a79af67a629?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    Solo_Guitar,
   ];
 
   const videos = [
-    { id: '1', title: 'Live at Acoustic Lounge', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: '2', title: 'Wedding Performance', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: '3', title: 'Year End Party 2023', image: 'https://images.unsplash.com/photo-1540039155732-d68877112003?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }
+    { id: '1', title: 'Chiếc Khăn Piêu', youtubeId: 'lmehbj2FkNQ' },
+    { id: '2', title: 'Soạn', youtubeId: '-l-OxiAns7Y' },
+    { id: '3', title: 'Opalite', youtubeId: 'lXEFTC55ABE' }
   ];
 
   return (
@@ -75,21 +74,41 @@ const Media = () => {
             animate={{ opacity: 1 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {videos.map((video, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-xl h-64 cursor-pointer border border-gray-800">
-                <img
-                  src={video.image}
-                  alt={video.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-accent/90 flex items-center justify-center text-dark text-2xl group-hover:scale-110 transition-transform duration-300 mb-4 shadow-[0_0_20px_rgba(207,166,99,0.4)]">
-                    <FiPlay className="ml-1" />
-                  </div>
-                  <h4 className="text-white font-semibold text-lg">{video.title}</h4>
+            {videos.map((video, i) => {
+              const isPlaying = playingVideo === video.id;
+              return (
+                <div key={i} className="group relative overflow-hidden rounded-xl h-64 border border-gray-800 bg-black">
+                  {isPlaying ? (
+                    <iframe 
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1`}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <>
+                      <img
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
+                        alt={video.title}
+                        onError={(e) => { e.target.src = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`; }}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40"
+                      />
+                      <div 
+                        className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
+                        onClick={() => setPlayingVideo(video.id)}
+                      >
+                        <div className="w-16 h-16 rounded-full bg-accent/90 flex items-center justify-center text-dark text-2xl group-hover:scale-110 transition-transform duration-300 mb-4 shadow-[0_0_20px_rgba(207,166,99,0.4)]">
+                          <FiPlay className="ml-1" />
+                        </div>
+                        <h4 className="text-white font-semibold text-lg">{video.title}</h4>
+                      </div>
+                    </>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </motion.div>
         )}
       </div>
