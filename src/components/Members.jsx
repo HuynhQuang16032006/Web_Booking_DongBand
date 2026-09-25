@@ -8,7 +8,7 @@ import HoàngPhương from '../assets/Hoàng Phương.png'
 import MaiThành from '../assets/Mai Thành.png'
 import VănAn from '../assets/Văn An.png'
 import TuấnHưng from '../assets/Tuấn Hưng.png'
-import XuânAnh from '../assets/XuanAnh.png'
+import XuânAnh from '../assets/Xuân Anh.png'
 
 
 const Members = () => {
