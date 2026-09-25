@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #121212;
+  --color-darker: #0a0a0a;
+  --color-accent: #cfa663;
+  --color-accentHover: #e5b86b;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-darker text-gray-200 font-sans antialiased;
+  }
+  
+  /* Tùy chỉnh thanh cuộn để không lộ rõ */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+  
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #333333 transparent;
+  }
+}
