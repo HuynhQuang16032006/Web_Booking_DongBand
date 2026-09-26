@@ -1,4 +1,5 @@
-import { FiFacebook, FiTiktok, FiYoutube, FiMusic } from 'react-icons/fi';
+import { FiFacebook, FiYoutube, FiMusic } from 'react-icons/fi';
+import { FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
                 <FiFacebook />
               </a>
               <a href="https://www.tiktok.com/@bannhacdong" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
-                <FiTiktok />
+                <FaTiktok />
               </a>
               <a href="https://www.youtube.com/@bannhacdong2025" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
                 <FiYoutube />
