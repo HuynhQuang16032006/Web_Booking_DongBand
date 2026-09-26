@@ -6,7 +6,7 @@ const About = () => {
   const stats = [
     { id: 1, icon: <FiCalendar className="w-6 h-6 text-accent" />, value: '1+', label: 'Năm hoạt động' },
     { id: 2, icon: <FiStar className="w-6 h-6 text-accent" />, value: '50+', label: 'Shows đã diễn' },
-    { id: 3, icon: <FiUsers className="w-6 h-6 text-accent" />, value: '9', label: 'Thành viên' },
+    { id: 3, icon: <FiUsers className="w-6 h-6 text-accent" />, value: '10', label: 'Thành viên' },
     { id: 4, icon: <FiMusic className="w-6 h-6 text-accent" />, value: '20+', label: 'Đối tác sự kiện' },
   ];
 
