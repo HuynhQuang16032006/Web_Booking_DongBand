@@ -1,4 +1,4 @@
-import { FiFacebook, FiInstagram, FiYoutube, FiMusic } from 'react-icons/fi';
+import { FiFacebook, FiTiktok, FiYoutube, FiMusic } from 'react-icons/fi';
 
 const Footer = () => {
   return (
@@ -16,13 +16,13 @@ const Footer = () => {
               <a href="https://www.facebook.com/bannhacdong" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
                 <FiFacebook />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
-                <FiInstagram />
+              <a href="https://www.tiktok.com/@bannhacdong" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
+                <FiTiktok />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
+              <a href="https://www.youtube.com/@bannhacdong2025" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
                 <FiYoutube />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
+              <a href="#media" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-dark transition-colors">
                 <FiMusic />
               </a>
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
           <span className="font-bold text-xs absolute -bottom-5 text-gray-300">Mess</span>
           <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="0.8em" width="0.8em" xmlns="http://www.w3.org/2000/svg"><path d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.81c52.27-23.31 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"></path></svg>
         </a>
-        
+
         {/* Zalo Button */}
         <a href="https://zalo.me/0937943380" target="_blank" rel="noreferrer" className="relative w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:scale-110 transition-transform animate-bounce">
           <span className="font-bold text-xs absolute -bottom-5 text-gray-300">Zalo</span>
